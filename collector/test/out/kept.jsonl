@@ -1,0 +1,1 @@
+{"resourceSpans":[{"resource":{},"scopeSpans":[{"scope":{},"spans":[{"traceId":"90f707762943b65241f85968133a4be0","spanId":"67639526ba28eefa","name":"x","startTimeUnixNano":"1791261168451555900","endTimeUnixNano":"1791261168451555901","attributes":[{"key":"app.outcome","value":{"stringValue":"fail"}}],"status":{}}]}]}]}

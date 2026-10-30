@@ -1,0 +1,786 @@
+[
+ {
+  "sec": "4.1",
+  "what": "tau-bench runs / failed",
+  "paper": "1,980 / 797",
+  "ours": "1980 / 797",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "4.1",
+  "what": "tau-bench failure share %",
+  "paper": 40.3,
+  "ours": 40.3,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "4.2",
+  "what": "spans tau / WW",
+  "paper": "54,612 / 4,092",
+  "ours": "54612 / 4092",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T1",
+  "what": "tau all traces with ERROR: failed %",
+  "paper": 33.9,
+  "ours": 33.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T1",
+  "what": "tau all traces with ERROR: OK %",
+  "paper": 30.3,
+  "ours": 30.3,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T1",
+  "what": "WW decisive ERROR strict %",
+  "paper": 9.8,
+  "ours": 9.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T1",
+  "what": "WW decisive ERROR loose %",
+  "paper": 17.9,
+  "ours": 19.0,
+  "status": "DIFF",
+  "note": "depends on the exact loose regex, which the paper does not give"
+ },
+ {
+  "sec": "T1",
+  "what": "TRAIL decisive ERROR %",
+  "paper": 8.2,
+  "ours": 8.2,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "1",
+  "what": "TRAIL median trace KB",
+  "paper": 386,
+  "ours": 393.7,
+  "status": "DIFF",
+  "note": "byte accounting (JSON of each OTLP span) differs slightly"
+ },
+ {
+  "sec": "5",
+  "what": "AUC ERROR presence tau",
+  "paper": 0.518,
+  "ours": 0.518,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "AUC ERROR presence TRAIL",
+  "paper": 0.509,
+  "ours": 0.509,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "AUC latency TRAIL",
+  "paper": 0.475,
+  "ours": 0.475,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "AUC token count tau",
+  "paper": 0.594,
+  "ours": 0.59,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "TRAIL ERROR spans total",
+  "paper": 437,
+  "ours": 437,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "WW median spans after decisive",
+  "paper": 5,
+  "ours": 5.0,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "WW median relative position (paper: one third)",
+  "paper": 0.33,
+  "ours": 0.3,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "WW share with >=4 spans after %",
+  "paper": 71.2,
+  "ours": 71.2,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "WW share with ERROR after decisive %",
+  "paper": 35.3,
+  "ours": 35.9,
+  "status": "DIFF",
+  "note": ""
+ },
+ {
+  "sec": "5",
+  "what": "TRAIL median spans after decisive",
+  "paper": 4,
+  "ours": 4.0,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "F3",
+  "what": "Figure 3 histogram (0,1,2,3,4-5,6-8,9-19,20-39,40+)",
+  "paper": "bars ~8,18,7,20,49,36,17,8,20",
+  "ours": "[8, 18, 7, 20, 50, 36, 17, 8, 20]",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TRAIL median size with/without ERROR (MB)",
+  "paper": "1.37 / 0.131",
+  "ours": "1.41 / 0.135",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TRAIL weighted bytes held by ERROR traces %",
+  "paper": 86,
+  "ours": 86.2,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TRAIL median SWE / GAIA (MB)",
+  "paper": "1.56 / 0.21",
+  "ours": "1.57 / 0.21",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "GAIA: median size with/without ERROR (MB)",
+  "paper": "1.15 / 0.10",
+  "ours": "1.21 / 0.11",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "SWE: median size with/without ERROR (MB)",
+  "paper": "1.93 / 0.83",
+  "ours": "1.94 / 0.84",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TAIL-ERR recall within GAIA %",
+  "paper": 8.9,
+  "ours": 8.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TAIL-ERR recall within SWE %",
+  "paper": 13.2,
+  "ours": 13.2,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "GAIA: ERROR share failed / others %",
+  "paper": "44.8 / 28.6",
+  "ours": "44.8 / 28.6",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "non-failed runs GAIA / SWE; SWE failures",
+  "paper": "21 / 17; 14",
+  "ours": "21 / 17; 14",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TAIL-ERR tau recall at pi=0.01",
+  "paper": 14.9,
+  "ours": 15.0,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TAIL-ERR tau recall at pi=0.1",
+  "paper": 14.7,
+  "ours": 14.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TAIL-COST tau ERE at 5% budget",
+  "paper": 1.66,
+  "ours": 1.58,
+  "status": "DIFF",
+  "note": "token definition not fully specified"
+ },
+ {
+  "sec": "6",
+  "what": "TAIL-LATENCY ERE range over budgets",
+  "paper": "0.55-1.55",
+  "ours": "0.55-1.55",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "TAIL-ERR tau recall",
+  "paper": 14.8,
+  "ours": 14.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "TAIL-ERR TRAIL recall",
+  "paper": 8.5,
+  "ours": 8.5,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "TAIL-ERR+COST tau recall",
+  "paper": 15.6,
+  "ours": 15.1,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "TAIL-LATENCY TRAIL recall",
+  "paper": 15.5,
+  "ours": 15.5,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "n-gram tau recall",
+  "paper": 25.2,
+  "ours": 25.3,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "n-gram TRAIL recall",
+  "paper": 21.8,
+  "ours": 20.0,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "n-gram AUC tau / TRAIL (paper order: n-gram, IF)",
+  "paper": "0.563 / 0.452",
+  "ours": "0.559 / 0.630",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "TRAIL long-run rule fires on OK vs failed %",
+  "paper": "\u22482x",
+  "ours": "34.2 / 21.8",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "Judge measured TPR .32/FPR .11 applied to all runs",
+  "paper": 34.2,
+  "ours": 34.2,
+  "status": "OK",
+  "note": "paper used unrounded TPR/FPR"
+ },
+ {
+  "sec": "T2",
+  "what": "parametric judge 0.6/0.05",
+  "paper": 63.0,
+  "ours": 63.0,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "parametric judge 0.8/0.1",
+  "paper": 80.2,
+  "ours": 80.2,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "parametric judge 0.95/0.05",
+  "paper": 95.3,
+  "ours": 95.3,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T2",
+  "what": "oracle ERE at 15%",
+  "paper": 6.67,
+  "ours": 6.67,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "TRAIL weighted bytes of the 38 non-failed runs %",
+  "paper": "most",
+  "ours": 97.2,
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T3",
+  "what": "TPR 0.32 (n=200) Wilson 95% CI",
+  "paper": "0.26-0.39",
+  "ours": "0.26-0.39",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T3",
+  "what": "FPR 0.11 (n=200) Wilson 95% CI",
+  "paper": "0.07-0.16",
+  "ours": "0.07-0.16",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T3",
+  "what": "TPR = mean(airline .43, retail .21)",
+  "paper": 0.32,
+  "ours": 0.32,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T3",
+  "what": "FPR = mean(airline .15, retail .07)",
+  "paper": 0.11,
+  "ours": 0.11,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "6",
+  "what": "judge agreement on balanced sample = (TPR+1-FPR)/2 %",
+  "paper": 60.5,
+  "ours": 60.5,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T3",
+  "what": "cost per 1,000 runs at $1/MTok input (Haiku 4.5)",
+  "paper": 4,
+  "ours": 3.85,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "7",
+  "what": "WW judge flag rate from per-system rates %",
+  "paper": 72.8,
+  "ours": 72.9,
+  "status": "DIFF",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "ERROR spans only: recall",
+  "paper": 9.8,
+  "ours": 9.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "ERROR + 1 before: recall",
+  "paper": 25.5,
+  "ours": 25.5,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "ERROR + 8 before: recall",
+  "paper": 31.5,
+  "ours": 31.5,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "Last 4 spans: recall",
+  "paper": 28.8,
+  "ours": 28.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "Last 8 spans: recall",
+  "paper": 66.8,
+  "ours": 66.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "Tool spans only: recall",
+  "paper": 19.6,
+  "ours": 19.6,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "Agent spans only: recall",
+  "paper": 73.4,
+  "ours": 73.4,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T4",
+  "what": "Drop reasoning: recall",
+  "paper": 92.9,
+  "ours": 92.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "8",
+  "what": "WW error-anchored at 50%",
+  "paper": 25.0,
+  "ours": 25.0,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "8",
+  "what": "TRAIL error-anchored at 50%",
+  "paper": 26.4,
+  "ours": 26.4,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "8",
+  "what": "WW keep-the-start at 50%",
+  "paper": 54.3,
+  "ours": 54.3,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "8",
+  "what": "TRAIL anomalous at 50%",
+  "paper": 53.6,
+  "ours": 46.4,
+  "status": "DIFF",
+  "note": "anomaly score details not fully specified"
+ },
+ {
+  "sec": "8",
+  "what": "Who beats random at 50%: WW / TRAIL",
+  "paper": "start / anomalous",
+  "ours": "Keep the start / Anomalous spans (random 50.2 / 41.5)",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "ERROR+8: n dropped + kept = 176",
+  "paper": 176,
+  "ours": 176,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "ERROR+8: kept share = Table 5 Kept",
+  "paper": 31.3,
+  "ours": 31.2,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "ERROR+8: full-trace step accuracy from Table 6",
+  "paper": 39.8,
+  "ours": 39.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "ERROR+8: view step accuracy from Table 6",
+  "paper": 22.7,
+  "ours": 22.7,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "Last 8: n dropped + kept = 176",
+  "paper": 176,
+  "ours": 176,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "Last 8: kept share = Table 5 Kept",
+  "paper": 65.9,
+  "ours": 65.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "Last 8: full-trace step accuracy from Table 6",
+  "paper": 39.8,
+  "ours": 39.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "Last 8: view step accuracy from Table 6",
+  "paper": 32.4,
+  "ours": 32.4,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "First 30%: n dropped + kept = 176",
+  "paper": 176,
+  "ours": 176,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "First 30%: kept share = Table 5 Kept",
+  "paper": 38.6,
+  "ours": 38.6,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "First 30%: full-trace step accuracy from Table 6",
+  "paper": 39.8,
+  "ours": 39.8,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "T5/T6",
+  "what": "First 30%: view step accuracy from Table 6",
+  "paper": 30.7,
+  "ours": 30.7,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "9",
+  "what": "Bonferroni threshold for 3 tests vs p=.029",
+  "paper": "not significant",
+  "ours": "0.0167 < 0.029",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "TRAIL run length median / p90 (s)",
+  "paper": "131 / 1,052",
+  "ours": "131 / 1053",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "predicted kept (run+5s < 60s) %",
+  "paper": 10.1,
+  "ours": 10.1,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "predicted kept (run+5s < 120s) %",
+  "paper": 45.9,
+  "ours": 45.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "predicted kept (run+5s < 300s) %",
+  "paper": 79.7,
+  "ours": 79.7,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "predicted kept (run+5s < 600s) %",
+  "paper": 89.9,
+  "ours": 89.9,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "ERROR collector kept (traces with an ERROR span)",
+  "paper": 628,
+  "ours": 628,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "probabilistic 186 within 1 SD of 198",
+  "paper": "yes",
+  "ours": "|186-198|=12 < SD 13.3",
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "memory ratio 60 s ((484-162)/(311-162))",
+  "paper": 2.2,
+  "ours": 2.16,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "memory ratio 300 s ((2292-162)/(814-162))",
+  "paper": 3.3,
+  "ours": 3.27,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "600 s at 3/s extrapolated total GB",
+  "paper": 4.4,
+  "ours": 4.42,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "MB per held trace (2292-162)/984",
+  "paper": "1.1-2.2",
+  "ours": 2.16,
+  "status": "INFO",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "TRAIL mean MB per trace",
+  "paper": 1.14,
+  "ours": 1.17,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "10",
+  "what": "metadata share of tau span bytes %",
+  "paper": 42.6,
+  "ours": 27.5,
+  "status": "DIFF",
+  "note": "depends on attribute encoding"
+ },
+ {
+  "sec": "4.2",
+  "what": "tau: Spearman(protobuf, our bytes)",
+  "paper": 0.9999,
+  "ours": 0.9996,
+  "status": "DIFF",
+  "note": ""
+ },
+ {
+  "sec": "4.2",
+  "what": "tau: median protobuf/our ratio",
+  "paper": 0.97,
+  "ours": 1.08,
+  "status": "DIFF",
+  "note": ""
+ },
+ {
+  "sec": "4.2",
+  "what": "max recall change with protobuf sizes (pp)",
+  "paper": 0.27,
+  "ours": 0.5,
+  "status": "OK",
+  "note": "our policy set; SIZE-ONLY included"
+ },
+ {
+  "sec": "4.2",
+  "what": "WW: Spearman(protobuf, our bytes)",
+  "paper": 0.9999,
+  "ours": 0.9999,
+  "status": "OK",
+  "note": ""
+ },
+ {
+  "sec": "4.2",
+  "what": "WW: median protobuf/our ratio",
+  "paper": 0.99,
+  "ours": 1.04,
+  "status": "DIFF",
+  "note": ""
+ }
+]

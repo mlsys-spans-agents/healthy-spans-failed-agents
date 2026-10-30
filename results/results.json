@@ -1,0 +1,502 @@
+{
+ "checks": {
+  "tau_runs": 1980,
+  "tau_failed": 797,
+  "tau_spans": 54612,
+  "ww_runs": 184,
+  "ww_spans": 4092,
+  "ww_decisive_error_strict": 9.8,
+  "ww_decisive_error_loose": 19.0,
+  "trail_runs": 148,
+  "trail_failed": 110,
+  "trail_decisive_error": 8.2,
+  "trail_error_spans": 437,
+  "trail_median_trace_kb": 393.7
+ },
+ "tau": {
+  "HEAD": {
+   "recall": 15.0,
+   "ere": 1.0,
+   "auc": null,
+   "recall_equal_count": 15.0,
+   "ci": null
+  },
+  "SIZE-ONLY": {
+   "recall": 21.1,
+   "ere": 1.41,
+   "auc": 0.404,
+   "recall_equal_count": 11.3,
+   "ci": [
+    17.8,
+    24.4
+   ]
+  },
+  "TAIL-ERR": {
+   "recall": 14.9,
+   "ere": 0.99,
+   "auc": 0.518,
+   "recall_equal_count": 16.7,
+   "ci": [
+    13.1,
+    16.9
+   ]
+  },
+  "TAIL-COST": {
+   "recall": 15.8,
+   "ere": 1.05,
+   "auc": 0.59,
+   "recall_equal_count": 24.8,
+   "ci": null
+  },
+  "TAIL-ERR+COST": {
+   "recall": 15.1,
+   "ere": 1.01,
+   "auc": 0.54,
+   "recall_equal_count": 18.3,
+   "ci": null
+  },
+  "Anomaly: Isol. Forest": {
+   "recall": 17.3,
+   "ere": 1.15,
+   "auc": 0.572,
+   "recall_equal_count": 25.0,
+   "ci": null
+  },
+  "Anomaly: n-gram": {
+   "recall": 25.3,
+   "ere": 1.69,
+   "auc": 0.559,
+   "recall_equal_count": 22.2,
+   "ci": null
+  },
+  "Repeated identical tool call": {
+   "recall": 19.0,
+   "ere": 1.27,
+   "auc": 0.535,
+   "recall_equal_count": 21.1,
+   "ci": null
+  },
+  "Escalated to a human": {
+   "recall": 17.3,
+   "ere": 1.15,
+   "auc": 0.483,
+   "recall_equal_count": 11.9,
+   "ci": null
+  },
+  "No state-changing action": {
+   "recall": 20.0,
+   "ere": 1.33,
+   "auc": 0.483,
+   "recall_equal_count": 12.9,
+   "ci": null
+  },
+  "Any heuristic": {
+   "recall": 20.7,
+   "ere": 1.38,
+   "auc": 0.517,
+   "recall_equal_count": 16.6,
+   "ci": null
+  },
+  "Metadata classifier": {
+   "recall": 35.3,
+   "ere": 2.35,
+   "auc": 0.69,
+   "recall_equal_count": 37.9,
+   "ci": [
+    31.4,
+    39.6
+   ]
+  },
+  "Oracle": {
+   "recall": 100.0,
+   "ere": 6.67,
+   "auc": 1.0,
+   "recall_equal_count": 100.0,
+   "ci": null
+  },
+  "Judge TPR 0.6/FPR 0.05": {
+   "recall": 63.0,
+   "ere": 4.2
+  },
+  "Judge TPR 0.8/FPR 0.1": {
+   "recall": 80.2,
+   "ere": 5.35
+  },
+  "Judge TPR 0.95/FPR 0.05": {
+   "recall": 95.3,
+   "ere": 6.35
+  },
+  "size_only_curve": {
+   "5%": 10.4,
+   "10%": 14.7,
+   "15%": 21.1,
+   "20%": 25.5,
+   "30%": 32.1
+  },
+  "tail_err_other_pi": {
+   "0.01": 15.0,
+   "0.1": 14.8
+  },
+  "size_only_other_pi": {
+   "0.01": 20.6,
+   "0.1": 21.3
+  },
+  "median_bytes_failed_vs_ok": [
+   17168,
+   14376
+  ]
+ },
+ "trail": {
+  "HEAD": {
+   "recall": 15.0,
+   "ere": 1.0,
+   "auc": null,
+   "recall_equal_count": 15.0,
+   "ci": null
+  },
+  "SIZE-ONLY": {
+   "recall": 79.1,
+   "ere": 5.27,
+   "auc": 0.654,
+   "recall_equal_count": 27.3,
+   "ci": [
+    66.1,
+    87.0
+   ]
+  },
+  "TAIL-ERR": {
+   "recall": 8.5,
+   "ere": 0.57,
+   "auc": 0.509,
+   "recall_equal_count": 15.5,
+   "ci": [
+    6.9,
+    10.8
+   ]
+  },
+  "TAIL-COST": {
+   "recall": 0.0,
+   "ere": 0.0,
+   "auc": 0.361,
+   "recall_equal_count": 2.7,
+   "ci": null
+  },
+  "TAIL-ERR+COST": {
+   "recall": 8.7,
+   "ere": 0.58,
+   "auc": 0.513,
+   "recall_equal_count": 15.8,
+   "ci": null
+  },
+  "TAIL-LATENCY": {
+   "recall": 15.5,
+   "ere": 1.03,
+   "auc": 0.475,
+   "recall_equal_count": 16.4,
+   "ci": null
+  },
+  "Anomaly: Isol. Forest": {
+   "recall": 15.5,
+   "ere": 1.03,
+   "auc": 0.433,
+   "recall_equal_count": 22.7,
+   "ci": null
+  },
+  "Anomaly: n-gram": {
+   "recall": 20.0,
+   "ere": 1.33,
+   "auc": 0.63,
+   "recall_equal_count": 20.0,
+   "ci": null
+  },
+  "Repeated identical tool call": {
+   "recall": 17.8,
+   "ere": 1.19,
+   "auc": 0.533,
+   "recall_equal_count": 20.9,
+   "ci": null
+  },
+  "No final answer": {
+   "recall": 18.2,
+   "ere": 1.22,
+   "auc": 0.51,
+   "recall_equal_count": 16.6,
+   "ci": null
+  },
+  "Long run (top quarter by steps)": {
+   "recall": 5.3,
+   "ere": 0.35,
+   "auc": 0.438,
+   "recall_equal_count": 9.7,
+   "ci": null
+  },
+  "Any heuristic": {
+   "recall": 6.3,
+   "ere": 0.42,
+   "auc": 0.448,
+   "recall_equal_count": 10.9,
+   "ci": null
+  },
+  "Metadata classifier": {
+   "recall": 51.8,
+   "ere": 3.45,
+   "auc": 0.721,
+   "recall_equal_count": 30.0,
+   "ci": [
+    4.9,
+    92.8
+   ]
+  },
+  "Oracle": {
+   "recall": 100.0,
+   "ere": 6.67,
+   "auc": 1.0,
+   "recall_equal_count": 100.0,
+   "ci": null
+  },
+  "Judge TPR 0.6/FPR 0.05": {
+   "recall": 63.6,
+   "ere": 4.24
+  },
+  "Judge TPR 0.8/FPR 0.1": {
+   "recall": 80.7,
+   "ere": 5.38
+  },
+  "Judge TPR 0.95/FPR 0.05": {
+   "recall": 95.4,
+   "ere": 6.36
+  },
+  "size_only_curve": {
+   "5%": 65.5,
+   "10%": 76.4,
+   "15%": 79.1,
+   "20%": 79.1,
+   "30%": 86.4
+  },
+  "tail_err_other_pi": {
+   "0.01": 8.5,
+   "0.1": 8.5
+  },
+  "size_only_other_pi": {
+   "0.01": 79.1,
+   "0.1": 79.1
+  },
+  "median_bytes_failed_vs_ok": [
+   243075,
+   1152000
+  ]
+ },
+ "trail_by_benchmark": {
+  "pooled_oof_auc_GAIA": 0.623,
+  "size_only_auc_GAIA": 0.536,
+  "n_GAIA": [
+   117,
+   96
+  ],
+  "within_refit_auc_GAIA": 0.649,
+  "pooled_oof_auc_SWE": 0.685,
+  "size_only_auc_SWE": 0.727,
+  "n_SWE": [
+   31,
+   14
+  ],
+  "within_refit_auc_SWE": 0.739,
+  "auc_benchmark_identity": 0.34,
+  "benchmark_grouped_auc": 0.387,
+  "benchmark_grouped_recall": 7.3,
+  "fold_spread_recall": {
+   "mean": 34.5,
+   "min": 6.4,
+   "max": 60.9
+  }
+ },
+ "tau_transfer": {
+  "train_Claude 3.5 Sonnet": {
+   "auc": 0.668,
+   "recall": 32.2
+  },
+  "train_GPT-4o": {
+   "auc": 0.698,
+   "recall": 37.1
+  },
+  "train_airline": {
+   "auc": 0.546,
+   "recall": 17.2
+  },
+  "train_retail": {
+   "auc": 0.406,
+   "recall": 11.4
+  }
+ },
+ "table4": {
+  "ERROR spans only": [
+   9.4,
+   9.8,
+   7.9,
+   13.8
+  ],
+  "ERROR + 1 before": [
+   16.5,
+   25.5,
+   31.0,
+   13.8
+  ],
+  "ERROR + 8 before": [
+   31.0,
+   31.5,
+   38.9,
+   15.5
+  ],
+  "Last 4 spans": [
+   30.6,
+   28.8,
+   29.4,
+   27.6
+  ],
+  "Last 8 spans": [
+   67.1,
+   66.8,
+   81.7,
+   34.5
+  ],
+  "Tool spans only": [
+   30.7,
+   19.6,
+   1.6,
+   58.6
+  ],
+  "Agent spans only": [
+   55.6,
+   73.4,
+   98.4,
+   19.0
+  ],
+  "Drop reasoning": [
+   86.8,
+   92.9,
+   100.0,
+   77.6
+  ]
+ },
+ "fig4": {
+  "ww": {
+   "Error-anchored": [
+    7.6,
+    12.0,
+    20.1,
+    25.0
+   ],
+   "Keep the end": [
+    6.0,
+    16.3,
+    29.3,
+    45.1
+   ],
+   "Keep the start": [
+    13.6,
+    21.7,
+    37.5,
+    54.3
+   ],
+   "Anomalous spans": [
+    8.7,
+    16.3,
+    25.0,
+    38.0
+   ],
+   "Random": [
+    9.1,
+    20.5,
+    31.0,
+    50.2
+   ]
+  },
+  "trail": {
+   "Error-anchored": [
+    12.7,
+    14.5,
+    20.0,
+    26.4
+   ],
+   "Keep the end": [
+    12.7,
+    12.7,
+    21.8,
+    36.4
+   ],
+   "Keep the start": [
+    6.4,
+    16.4,
+    25.5,
+    40.0
+   ],
+   "Anomalous spans": [
+    7.3,
+    15.5,
+    25.5,
+    46.4
+   ],
+   "Random": [
+    6.9,
+    12.9,
+    20.7,
+    41.5
+   ]
+  }
+ },
+ "diagnosis": {
+  "Full": {
+   "spans_pooled": 100.0,
+   "kept": 184,
+   "dropped": 0,
+   "chance_view_overall": 9.5,
+   "chance_view_on_kept": 9.5,
+   "chance_full_on_kept": 9.5,
+   "chance_full_on_dropped": null
+  },
+  "Last 8": {
+   "spans_pooled": 34.3,
+   "kept": 123,
+   "dropped": 61,
+   "chance_view_overall": 9.2,
+   "chance_view_on_kept": 13.7,
+   "chance_full_on_kept": 11.7,
+   "chance_full_on_dropped": 5.1
+  },
+  "First 30%": {
+   "spans_pooled": 26.1,
+   "kept": 50,
+   "dropped": 134,
+   "chance_view_overall": 8.8,
+   "chance_view_on_kept": 32.4,
+   "chance_full_on_kept": 7.0,
+   "chance_full_on_dropped": 10.5
+  },
+  "ERROR+8": {
+   "spans_pooled": 17.1,
+   "kept": 58,
+   "dropped": 126,
+   "chance_view_overall": 7.9,
+   "chance_view_on_kept": 25.1,
+   "chance_full_on_kept": 10.8,
+   "chance_full_on_dropped": 8.9
+  }
+ },
+ "judge_truncation": {
+  "span JSON": {
+   "share_at_limit": 31.8,
+   "median_chars": 24000
+  },
+  "name + input/output": {
+   "share_at_limit": 22.3,
+   "median_chars": 16474
+  }
+ },
+ "collector_threshold": {
+  "0.4": 808,
+  "0.45": 674,
+  "0.5": 561,
+  "0.55": 472,
+  "n_admitted_at_15pct_budget": 428
+ }
+}

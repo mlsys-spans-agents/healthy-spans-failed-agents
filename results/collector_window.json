@@ -1,0 +1,44 @@
+{
+ "version": "0.162.0",
+ "send_errors": 0,
+ "compress": 10.0,
+ "delay": 5.0,
+ "send_lag_s": {
+  "p50": 0.048,
+  "p99": 0.058,
+  "max": 0.113
+ },
+ "60": {
+  "kept": 11.5,
+  "predicted": 10.1,
+  "predicted_from_wire": 10.1,
+  "predicted_plus_tick": 18.9,
+  "kept_but_late": 0,
+  "missed_but_in_time": 0
+ },
+ "120": {
+  "kept": 46.6,
+  "predicted": 45.9,
+  "predicted_from_wire": 45.9,
+  "predicted_plus_tick": 47.3,
+  "kept_but_late": 0,
+  "missed_but_in_time": 0
+ },
+ "300": {
+  "kept": 81.1,
+  "predicted": 79.7,
+  "predicted_from_wire": 79.7,
+  "predicted_plus_tick": 81.8,
+  "kept_but_late": 0,
+  "missed_but_in_time": 0
+ },
+ "600": {
+  "kept": 89.9,
+  "predicted": 89.9,
+  "predicted_from_wire": 89.9,
+  "predicted_plus_tick": 89.9,
+  "kept_but_late": 0,
+  "missed_but_in_time": 0
+ },
+ "wall_minutes": 10.1
+}

@@ -1,0 +1,25 @@
+{
+ "version": "0.162.0",
+ "send_errors": 0,
+ "threshold": 0.5,
+ "n_flagged": 561,
+ "err": {
+  "kept": 628,
+  "predicted": 628,
+  "extra": 0,
+  "missed": 0,
+  "incomplete": 0
+ },
+ "outcome": {
+  "kept": 561,
+  "predicted": 561,
+  "extra": 0,
+  "missed": 0,
+  "incomplete": 0
+ },
+ "prob": {
+  "kept": 209,
+  "incomplete": 0
+ },
+ "wall_minutes": 1.3
+}

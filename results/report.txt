@@ -1,0 +1,96 @@
+## Data checks {
+ "tau_runs": 1980,
+ "tau_failed": 797,
+ "tau_spans": 54612,
+ "ww_runs": 184,
+ "ww_spans": 4092,
+ "ww_decisive_error_strict": 9.8,
+ "ww_decisive_error_loose": 19.0,
+ "trail_runs": 148,
+ "trail_failed": 110,
+ "trail_decisive_error": 8.2,
+ "trail_error_spans": 437,
+ "trail_median_trace_kb": 393.7
+}
+
+## Trace-level, tau (15% byte budget, pi=5%)
+policy                               recall   ERE    AUC eq-count  95% CI (bytes)
+HEAD                                   15.0  1.00            15.0
+SIZE-ONLY                              21.1  1.41  0.404     11.3  [17.8, 24.4]
+TAIL-ERR                               14.9  0.99  0.518     16.7  [13.1, 16.9]
+TAIL-COST                              15.8  1.05  0.590     24.8
+TAIL-ERR+COST                          15.1  1.01  0.540     18.3
+Anomaly: Isol. Forest                  17.3  1.15  0.572     25.0
+Anomaly: n-gram                        25.3  1.69  0.559     22.2
+Repeated identical tool call           19.0  1.27  0.535     21.1
+Escalated to a human                   17.3  1.15  0.483     11.9
+No state-changing action               20.0  1.33  0.483     12.9
+Any heuristic                          20.7  1.38  0.517     16.6
+Metadata classifier                    35.3  2.35  0.690     37.9  [31.4, 39.6]
+Oracle                                100.0  6.67  1.000    100.0
+Judge TPR 0.60 / FPR 0.05              63.0  4.20
+Judge TPR 0.80 / FPR 0.10              80.2  5.35
+Judge TPR 0.95 / FPR 0.05              95.3  6.35
+SIZE-ONLY across budgets: {'5%': 10.4, '10%': 14.7, '15%': 21.1, '20%': 25.5, '30%': 32.1}
+TAIL-ERR at pi=1%/10%: {0.01: 15.0, 0.1: 14.8}  SIZE-ONLY at pi=1%/10%: {0.01: 20.6, 0.1: 21.3}
+median bytes failed / not failed: [17168, 14376]
+
+## Trace-level, trail (15% byte budget, pi=5%)
+policy                               recall   ERE    AUC eq-count  95% CI (bytes)
+HEAD                                   15.0  1.00            15.0
+SIZE-ONLY                              79.1  5.27  0.654     27.3  [66.1, 87.0]
+TAIL-ERR                                8.5  0.57  0.509     15.5  [6.9, 10.8]
+TAIL-COST                               0.0  0.00  0.361      2.7
+TAIL-ERR+COST                           8.7  0.58  0.513     15.8
+TAIL-LATENCY                           15.5  1.03  0.475     16.4
+Anomaly: Isol. Forest                  15.5  1.03  0.433     22.7
+Anomaly: n-gram                        20.0  1.33  0.630     20.0
+Repeated identical tool call           17.8  1.19  0.533     20.9
+No final answer                        18.2  1.22  0.510     16.6
+Long run (top quarter by steps)         5.3  0.35  0.438      9.7
+Any heuristic                           6.3  0.42  0.448     10.9
+Metadata classifier                    51.8  3.45  0.721     30.0  [4.9, 92.8]
+Oracle                                100.0  6.67  1.000    100.0
+Judge TPR 0.60 / FPR 0.05              63.6  4.24
+Judge TPR 0.80 / FPR 0.10              80.7  5.38
+Judge TPR 0.95 / FPR 0.05              95.4  6.36
+SIZE-ONLY across budgets: {'5%': 65.5, '10%': 76.4, '15%': 79.1, '20%': 79.1, '30%': 86.4}
+TAIL-ERR at pi=1%/10%: {0.01: 8.5, 0.1: 8.5}  SIZE-ONLY at pi=1%/10%: {0.01: 79.1, 0.1: 79.1}
+median bytes failed / not failed: [243075, 1152000]
+
+## TRAIL classifier within each benchmark
+GAIA: n=117 failed=96  pooled-OOF AUC=0.623  refit-within AUC=0.649  size-only AUC=0.536
+SWE: n=31 failed=14  pooled-OOF AUC=0.685  refit-within AUC=0.739  size-only AUC=0.727
+AUC of benchmark identity alone: 0.34  classifier with folds grouped by benchmark: AUC 0.387 recall 7.3
+classifier recall over 50 fold assignments: {'mean': 34.5, 'min': 6.4, 'max': 60.9}
+
+## tau-bench classifier transfer
+train on Claude 3.5 Sonnet, test on the rest: AUC 0.668  recall 32.2
+train on GPT-4o, test on the rest: AUC 0.698  recall 37.1
+train on airline, test on the rest: AUC 0.546  recall 17.2
+train on retail, test on the rest: AUC 0.406  recall 11.4
+
+## Table 4 (Who&When fixed span policies): bytes (mean per trace), recall, Alg, Hand
+ERROR spans only     [9.4, 9.8, 7.9, 13.8]
+ERROR + 1 before     [16.5, 25.5, 31.0, 13.8]
+ERROR + 8 before     [31.0, 31.5, 38.9, 15.5]
+Last 4 spans         [30.6, 28.8, 29.4, 27.6]
+Last 8 spans         [67.1, 66.8, 81.7, 34.5]
+Tool spans only      [30.7, 19.6, 1.6, 58.6]
+Agent spans only     [55.6, 73.4, 98.4, 19.0]
+Drop reasoning       [86.8, 92.9, 100.0, 77.6]
+
+## Figure 4 (10/20/30/50% per-trace budget) {"ww": {"Error-anchored": [7.6, 12.0, 20.1, 25.0], "Keep the end": [6.0, 16.3, 29.3, 45.1], "Keep the start": [13.6, 21.7, 37.5, 54.3], "Anomalous spans": [8.7, 16.3, 25.0, 38.0], "Random": [9.1, 20.5, 31.0, 50.2]}, "trail": {"Error-anchored": [12.7, 14.5, 20.0, 26.4], "Keep the end": [12.7, 12.7, 21.8, 36.4], "Keep the start": [6.4, 16.4, 25.5, 40.0], "Anomalous spans": [7.3, 15.5, 25.5, 46.4], "Random": [6.9, 12.9, 20.7, 41.5]}}
+
+## Diagnosis views (Who&When, all 184 failures) and chance baselines
+Full       spans 100.0%  kept 184/184  chance(view|kept)=9.5%  chance(full|kept)=9.5%
+Last 8     spans  34.3%  kept 123/184  chance(view|kept)=13.7%  chance(full|kept)=11.7%
+First 30%  spans  26.1%  kept  50/184  chance(view|kept)=32.4%  chance(full|kept)=7.0%
+ERROR+8    spans  17.1%  kept  58/184  chance(view|kept)=25.1%  chance(full|kept)=10.8%
+
+## TRAIL judge input truncation
+span JSON: 31.8% of runs reach 40000 chars (median 24000 chars before the run cap)
+name + input/output: 22.3% of runs reach 40000 chars (median 16474 chars before the run cap)
+
+## Outcome-collector flag counts for candidate thresholds (paper: 527 of 1,980 kept)
+{'0.4': 808, '0.45': 674, '0.5': 561, '0.55': 472, 'n_admitted_at_15pct_budget': 428}
