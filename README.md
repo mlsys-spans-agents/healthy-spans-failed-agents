@@ -1,4 +1,4 @@
-# Healthy Spans, Failed Agents — reproduction code
+# Healthy Spans, Failed Agents
 
 Reproduces the checkable numbers in the paper from the raw public datasets. No GPU
 and no API key are needed for the core experiments (only to download the gated TRAIL
