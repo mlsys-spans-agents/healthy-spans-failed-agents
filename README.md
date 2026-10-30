@@ -3,7 +3,6 @@
 ```
 export HF_TOKEN=...      # TRAIL is gated on Hugging Face
 ./reproduce.sh           # fetch data, run everything (~20 s after download)
-python -m hs.fill_pdf    # write healthy-spans-filled.pdf from results/results.json
 ```
 
 | File | Contents |
